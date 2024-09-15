@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200;300&family=Rubik:wght@500&display=swap');
+
+body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg {
+    opacity: 0;
+    position: absolute;
+    
+    right: 0px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-image: url('/Content/images/Cert/MBS.jpg');
+    background-size: 100%;
+    width: 50vw;
+    height: calc(50vw * 0.707);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.border {
+    background-image: url('/Content/images/Cert/certificate.svg');
+    background-size: 100%;
+    width: 50vw;
+    height: calc(50vw * 0.707);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 8vh;
+    /*margin: auto;*/
+    top: 10%;
+    box-sizing: border-box;
+}
+
+    .border > div {
+        border: 0px solid black;
+    }
+
+.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-grow: 1;
+    /*padding-bottom: 7vh;*/
+}
+
+.mcit-logo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+    .mcit-logo img {
+        width: 30vh;
+    }
+
+.shahada {
+    display: flex;
+    padding-top: 3vh;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+    .shahada img {
+        width: 12vw;
+        margin-top: 1vw;
+        margin-bottom:4vh;
+    }
+
+.footer > div {
+    width: 15vw;
+    border: 0px solid black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mbs-logo {
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    transform: translate(-2vw, -12vh);
+}
+
+    .mbs-logo img {
+        width: 9vw;
+    }
+
+.elcc-qr img {
+    width: 10vw;
+    transform: translateY(2vw);
+}
+
+.text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1vw);
+}
+
+    .text h3 {
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        font-weight: 200;
+        font-size: 16pt;
+        margin: 0px 0px;
+        padding: 0px;
+        line-height:6vh;
+    }
+
+        .text h3.title {
+            font-size: 16pt;
+            font-weight: 500;
+        }
+
+.signature {
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    flex-flow: column nowrap !important;
+    justify-content: center;
+    align-items: center !important;
+    margin-bottom: 10vh;
+}
+
+    .signature h4 {
+        font-size: 15pt;
+        margin: 0.5em 0px;
+        /*margin-right: 10vw;*/
+        padding: 0px;
+    }
+
+@media print {
+    @page {
+        size: landscape;
+        margin: 0px;
+        padding: 0px;
+    }
+}

@@ -1,0 +1,529 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    // Layout = "_Layout";
+}
+
+
+
+
+<div class="pageheader pd-t-25 pd-b-35">
+    <div class="pd-t-5 pd-b-5">
+        <h1 class="pd-0 mg-0 tx-20">Dashboard</h1>
+    </div>
+
+    <div class="breadcrumb pd-0 mg-0">
+        <a class="breadcrumb-item" href="/Home/"><i class="icon ion-ios-home-outline"></i> Home</a>
+        <span class="breadcrumb-item active">Dashboard</span>
+    </div>
+</div>
+
+<!--/ Breadcrumb End -->
+
+<div class="row row-xs clearfix">
+    <!--================================-->
+    <!-- Donut Chart 1 Start -->
+    <!--================================-->
+
+    <div class="col-xl-6 col-md-12 col-lg-12">
+        <div class="card mg-b-20">
+            <div class="card-header">
+                <h4 class="card-header-title">
+                    Priorities
+                </h4>
+                <div class="card-header-btn">
+                    <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse10" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                    <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                    <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+                    <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
+                </div>
+            </div>
+            <div class="card-body collapse show" id="collapse10">
+                <div class="clearfix">
+                    <div id="flotPie2" class="ht-200 ht-sm-300"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6 col-md-12 col-lg-12">
+        <div class="card mg-b-20">
+            <div class="card-header">
+                <h4 class="card-header-title">
+                    Statuses
+                </h4>
+                <div class="card-header-btn">
+                    <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse10" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                    <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                    <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+                    <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
+                </div>
+            </div>
+            <div class="card-body collapse show" id="collapse10">
+                <div class="clearfix">
+                    <div id="flotPie3" class="ht-200 ht-sm-300"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-6 col-md-12 col-lg-12">
+        <div class="card mg-b-20">
+            <div class="card-header">
+                <h4 class="card-header-title">
+                    Team Leads and Users
+                </h4>
+                <div class="card-header-btn">
+                    <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse10" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                    <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                    <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+                    <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
+                </div>
+            </div>
+            <div class="card-body collapse show" id="collapse10">
+                <div class="clearfix">
+                    <div id="flotPie5" class="ht-200 ht-sm-300"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-6 col-md-12 col-lg-12">
+        <div class="card mg-b-20">
+            <div class="card-header">
+                <h4 class="card-header-title">
+                    Completed and In progress Tasks
+                </h4>
+                <div class="card-header-btn">
+                    <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse22" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                    <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                    <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+                    <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
+                </div>
+            </div>
+            <div class="card-body collapse show" id="collapse9">
+                <div class="clearfix">
+                    <div id="flotPie1" class="ht-200 ht-sm-300"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row row-xs clearfix">
+    <!--================================-->
+    <!-- Count Start -->
+    <!--================================-->
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+
+                    <div>
+                        <span class="mb-2">Number of Tasks </span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.AllTasksCount </span></h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-90p" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">Completed Tasks</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.CompletedTasksCount</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-85p" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">High Priority Tasks</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.HardPriorityTasksCount</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-95p" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">All Teams</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.AllTeamsCount</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-80p" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">All Users</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.AllUsersCount</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-80p" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">All Team Leads</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.AllTeamLeadsCount</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-80p" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--/ Count End -->
+</div>
+
+
+@section Scripts {
+    <script>
+        var piedataTaskStatus = [{
+            label: "Completed",
+            data: [
+                [1, @ViewBag.CompletedTasksCount]
+            ],
+            color: '#5D78FF'
+        },
+        {
+            label: "In Progress",
+            data: [
+                [1, @ViewBag.InProgressTasksCount]
+            ],
+            color: '#545454'
+        }
+        ];
+
+        // Pie Chart 1
+        $.plot('#flotPie1', piedataTaskStatus, {
+            series: {
+                pie: {
+                    show: true,
+                    radius: 1,
+                    label: {
+                        show: true,
+                        radius: 2 / 3,
+                        formatter: labelFormatter,
+                        threshold: 0.1
+                    }
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true
+            }
+        });
+
+        var piedataPriorityStatus = [{
+            label: "High",
+            data: [
+                [1, @ViewBag.HighPriorityTasksCount]
+            ],
+            color: '#5D78FF'
+        },
+        {
+            label: "Medium",
+            data: [
+                [1, @ViewBag.MidPriorityTasksCount]
+            ],
+            color: '#545454'
+        },
+        {
+            label: "Easy",
+            data: [
+                [1, @ViewBag.EasyPriorityTasksCount]
+            ],
+            color: '#63CF72'
+        }
+        ];
+
+        $.plot('#flotPie2', piedataPriorityStatus, {
+            series: {
+                pie: {
+                    show: true,
+                    radius: 1,
+                    innerRadius: 0.5,
+                    label: {
+                        show: true,
+                        radius: 2 / 3,
+                        formatter: labelFormatter,
+                        threshold: 0.1
+                    }
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true
+            }
+        });
+
+
+        var piedataTaskStatus = [{
+            label: "ToDo",
+            data: [
+                [1, @ViewBag.ToDOTasksCount]
+            ],
+            color: '#5D78FF'
+        },
+        {
+            label: "In Progress",
+            data: [
+                [1, @ViewBag.CompletedTasksCount]
+            ],
+            color: '#545454'
+        },
+        {
+            label: "Completed",
+            data: [
+                [1, @ViewBag.CompletedTasksCount]
+            ],
+            color: '#63CF72'
+        }
+        ];
+
+        $.plot('#flotPie3', piedataTaskStatus, {
+            series: {
+                pie: {
+                    show: true,
+                    radius: 1,
+                    innerRadius: 0.5,
+                    label: {
+                        show: true,
+                        radius: 2 / 3,
+                        formatter: labelFormatter,
+                        threshold: 0.1
+                    }
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true
+            }
+        });
+
+
+        // Certificate Trainees and Non Certificates Trainee
+
+
+        var piedataRoles = [
+            {
+                label: "Team Leads",
+                data: [
+                    [1, @ViewBag.AllTeamLeadsCount]
+                ],
+                color: '#545454'
+            },
+            {
+                label: "Users",
+                data: [
+                    [1, @ViewBag.AllUsersCount]
+                ],
+                color: '#63CF72'
+            }
+        ];
+
+        $.plot('#flotPie5', piedataRoles, {
+            series: {
+                pie: {
+                    show: true,
+                    radius: 1,
+                    innerRadius: 0.5,
+                    label: {
+                        show: true,
+                        radius: 2 / 3,
+                        formatter: labelFormatter,
+                        threshold: 0.1
+                    }
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true
+            }
+        });
+
+        // Register Trainees And Non Registered Trainees
+
+        var piedataRoles = [
+            {
+                label: "Team Leads",
+                data: [
+                    [1, @ViewBag.AllTeamLeadsCount]
+                ],
+                color: '#545454'
+            },
+            {
+                label: "Users",
+                data: [
+                    [1, @ViewBag.AllUsersCount]
+                ],
+                color: '#5D78FF'
+            }
+        ];
+
+        $.plot('#flotPie6', piedataRoles, {
+            series: {
+                pie: {
+                    show: true,
+                    radius: 1,
+                    innerRadius: 0.5,
+                    label: {
+                        show: true,
+                        radius: 2 / 3,
+                        formatter: labelFormatter,
+                        threshold: 0.1
+                    }
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true
+            }
+        });
+
+
+
+
+
+        // Education Level
+        var piedataEducLevel = [{
+            label: "مؤهل عالى",
+            data: [
+                [1, RegisteredTraineesHighQualified]
+            ],
+            color: '#5D78FF'
+        },
+        {
+            label: "مؤهل متوسط",
+            data: [
+                [1, RegisteredTraineesMiddleQualified]
+            ],
+            color: '#545454'
+        },
+        {
+            label: "طالب",
+            data: [
+                [1, RegisteredTraineesStudent]
+            ],
+            color: '#63CF72'
+        }
+        ];
+
+        $.plot('#flotPie4', piedataEducLevel, {
+            series: {
+                pie: {
+                    show: true,
+                    radius: 1,
+                    innerRadius: 0.5,
+                    label: {
+                        show: true,
+                        radius: 2 / 3,
+                        formatter: labelFormatter,
+                        threshold: 0.1
+                    }
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true
+            }
+        });
+
+
+        function labelFormatter(label, series) {
+            return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
+        }
+
+
+        var options = {
+            chart: {
+                height: 350,
+                type: 'line',
+                zoom: {
+                    enabled: false
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            series: [{
+                name: "Government Count",
+                data: topGovernment.map(g => g.GovernmentCount)
+            }],
+            title: {
+                text: 'Government Count by Governorate',
+                align: 'left'
+            },
+            grid: {
+                row: {
+                    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                    opacity: 0.5
+                },
+            },
+            xaxis: {
+                categories: topGovernment.map(g => g.GovernorateName)
+            }
+        };
+
+        var chart = new ApexCharts(
+            document.querySelector("#basicLineChart"),
+            options
+        );
+
+        chart.render();
+
+
+
+
+
+    </script>
+}

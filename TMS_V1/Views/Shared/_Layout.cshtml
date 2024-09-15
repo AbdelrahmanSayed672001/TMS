@@ -1,0 +1,264 @@
+﻿@{
+    var lang = Thread.CurrentThread.CurrentUICulture.Name;
+}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS</title>
+    <link rel="icon" type="image/x-icon" href="~/assets/images/task-management.png">
+    <link type="text/css" href='~/Content/css/style.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/css/app.min.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/flag-icon/flag-icon.min.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/simple-line-icons/css/simple-line-icons.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/ionicons/css/ionicons.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/chartist/chartist.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/dropzone/dropzone.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/sweetalert/bootstrap-sweetalert.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/bootstrap-select/css/bootstrap-select.min.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/datepicker/css/datepicker.min.css' rel="stylesheet" />
+    <link type="text/css" href='~/Content/plugins/summernote/summernote-bs4.css' rel="stylesheet" />
+
+    <link type="text/css" rel="stylesheet" href="~/Backend/assets/plugins/apex-chart/apexcharts.css">
+    <script src="~/Backend/assets/plugins/apex-chart/apexcharts.min.js"></script>
+    <script src="~/Backend/assets/plugins/apex-chart/apex-sample.js"></script>
+    <script src="~/Backend/assets/plugins/apex-chart/irregular-data-series.js"></script>
+</head>
+<body class="fixed-left">
+    <div class="page-container">
+        <div class="page-sidebar">
+            <div class="logo">
+                <a class="logo-img" href="/Home/Index">
+                    <img class="desktop-logo" src="~/Content/images/logo-white.png" alt="" />
+                    <img class="small-logo" src="~/Content/images/small-logo.png" alt="" />
+                </a>
+                <i class="ion-ios-close-empty" id="sidebar-toggle-button-close"></i>
+            </div>
+            <div class="page-sidebar-inner">
+                <div class="page-sidebar-menu text-white">
+                    <ul class="accordion-menu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i data-feather="home"></i>
+                                <span>Home Page</span><i class="accordion-icon fa fa-angle-left"></i>
+                            </a>
+                            <ul class="sub-menu" style="display: block;">
+                                <li> <a href="/@(User.IsInRole(Role.REG_USER) ? "RegUserRoles" : "TeamLeadRoles")/Index">Home </a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i data-feather="aperture"></i>
+                                <span> Manage Tasks </span><i class="accordion-icon fa fa-angle-left"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+
+                                    <a href="/@(User.IsInRole(Role.REG_USER) ? "RegUserRoles" : "TeamLeadRoles")/Tasks/">Tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        @* 
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i data-feather="aperture"></i>
+                                <span>Manage Team Leads</span><i class="accordion-icon fa fa-angle-left"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/TeamLeads">Team Leads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i data-feather="aperture"></i>
+                                <span>Manage Users</span><i class="accordion-icon fa fa-angle-left"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/RegUsers">Users</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i data-feather="aperture"></i>
+                                <span>Manage Teams</span><i class="accordion-icon fa fa-angle-left"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/Teams">Teams</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        *@
+                       
+                    </ul>
+                    <div class="sb-sidenav-footer ml-3">
+                        <div class="small text-dark">Logged in as:</div>
+                        <partial name="_LoginPartial" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="page-inner">
+                <!-- Main Wrapper -->
+                <div id="main-wrapper">
+                    @RenderBody()
+                </div>
+            </div>
+
+            <div class="row-xs">
+                <footer class="text-center">
+                    <div class="pd-t-4 pd-b-0 pd-x-20">
+                        <div class="tx-10 tx-uppercase">
+                            <p class="pd-y-10 mb-0">&copy; @DateTime.Now.Year - TMS | All rights reserved.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    @* @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/popper")
+    @Scripts.Render("~/bundles/feather")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/pace")
+    @Scripts.Render("~/bundles/bootstrap-select")
+    @Scripts.Render("~/bundles/datepicker")
+    @Scripts.Render("~/bundles/datepicker-es")
+    @Scripts.Render("~/bundles/modal")
+    @Scripts.Render("~/bundles/modal-ui")
+    @Scripts.Render("~/bundles/sweetalert")
+    @Scripts.Render("~/bundles/countup")
+    @Scripts.Render("~/bundles/waypoints")
+    @Scripts.Render("~/bundles/dropify")
+    @Scripts.Render("~/bundles/dropzone")
+    @Scripts.Render("~/bundles/dashboard")
+    @Scripts.Render("~/bundles/slimscroll")
+    @Scripts.Render("~/bundles/highlight")
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", required: false) *@
+    <script src="~/Content/plugins/jquery/jquery.min.js"></script>
+    <script src="~/Content/plugins/jquery-ui/jquery-ui.js"></script>
+    <script src="~/Content/plugins/popper/popper.js"></script>
+    <script src="~/Content/plugins/feather-icon/feather.min.js"></script>
+    <script src="~/Content/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/plugins/pace/pace.min.js"></script>
+    <script src="~/Content/plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="~/Content/plugins/datepicker/js/datepicker.min.js"></script>
+    <script src="~/Content/plugins/datepicker/js/datepicker.es.js"></script>
+    <script src="~/Content/plugins/modal/bootbox.js"></script>
+    <script src="~/Content/plugins/modal/ui-modals.js"></script>
+    <script src="~/Content/plugins/sweetalert/bootstrap-sweetalert.js"></script>
+    <script src="~/Content/plugins/countup/counterup.min.js"></script>
+    <script src="~/Content/plugins/waypoints/waypoints.min.js"></script>
+    <script src="~/Content/plugins/dropify/js/dropify.min.js"></script>
+    <script src="~/Content/plugins/dropzone/dropzone.js"></script>
+    <script src="~/Scripts/dashboard/sales-dashboard-init.js"></script>
+    <script src="~/Scripts/jquery.slimscroll.min.js"></script>
+    <script src="~/Scripts/highlight.min.js"></script>
+    <script src="~/Scripts/app.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/Backend/assets/plugins/apex-chart/apexcharts.min.js"></script>
+    <script src="~/Backend/assets/plugins/apex-chart/apex-sample.js"></script>
+    <script src="~/Backend/assets/plugins/apex-chart/irregular-data-series.js"></script>
+    <script src="~/Backend/assets/plugins/flot/jquery.flot.js"></script>
+    <script src="~/Backend/assets/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="~/Backend/assets/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="~/Backend/assets/plugins/flot/flot-sample.js"></script>
+
+
+
+
+
+    <script src="~/assets/js/custom.js"></script>
+    <script src="~/~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <script type="text/javascript">
+
+        // Make Sunday and Saturday disabled
+        var disabledDays = [0, 6];
+        $('#disabled-days').datepicker({
+            language: 'en',
+            onRenderCell: function (date, cellType) {
+                if (cellType == 'day') {
+                    var day = date.getDay(),
+                        isDisabled = disabledDays.indexOf(day) != -1;
+
+                    return {
+                        disabled: isDisabled
+                    }
+                }
+            }
+        })
+        $('.dropify').dropify({
+            messages: {
+                'default': 'Drag and drop a file here or click',
+                'replace': 'Drag and drop or click to replace',
+                'remove': 'Remove',
+                'error': 'Ooops, something wrong happended.'
+            }
+        });
+
+        function createOptions(number) {
+            var options = [], _options;
+
+            for (var i = 0; i < number; i++) {
+                var option = '<option value="' + i + '">Option ' + i + '</option>';
+                options.push(option);
+            }
+
+            _options = options.join('');
+
+            $('#number')[0].innerHTML = _options;
+            $('#number-multiple')[0].innerHTML = _options;
+
+            $('#number2')[0].innerHTML = _options;
+            $('#number2-multiple')[0].innerHTML = _options;
+        }
+
+        var mySelect = $('#first-disabled2');
+
+        createOptions(4000);
+
+        $('#special').on('click', function () {
+            mySelect.find('option:selected').prop('disabled', true);
+            mySelect.selectpicker('refresh');
+        });
+
+        $('#special2').on('click', function () {
+            mySelect.find('option:disabled').prop('disabled', false);
+            mySelect.selectpicker('refresh');
+        });
+
+        $('#basic2').selectpicker({
+            liveSearch: true,
+            maxOptions: 1
+        });
+    </script>
+</body>
+</html>

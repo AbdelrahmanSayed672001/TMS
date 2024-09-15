@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "_BackendLayout";
+}
+
+@model TeamEditViewModel
+
+<link href="~/Content/plugins/dropify/css/dropify.min.css" rel="stylesheet" />
+<div class="page-inner">
+    <div id="main-wrapper">
+        <form asp-controller="Teams" asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <input asp-for="Id" type="hidden" value="@Model.Id" readonly/>
+
+            <div class="pageheader pd-t-25 pd-b-35 ">
+                <div class="pd-t-5 pd-b-5">
+                    <h1 class="pd-0 mg-0 text-left">User</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="card mg-b-20">
+                        <div class="collapse show" id="collapse6">
+
+                            @if (TempData["Result"] != null)
+                            {
+                                <div class="alert alert-danger alert-bordered pd-y-15" role="alert" id="DivError">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="ico icon-close"></i></span>
+                                    </button>
+                                    <div class="d-sm-flex align-items-center justify-content-start">
+                                        <i class="icon ion-ios-close alert-icon tx-52 tx-danger mg-r-20"></i>
+                                        <div class="mg-t-20 mg-sm-t-0">
+                                            <h5 class="mg-b-2 mr-2 tx-danger" id="hErrorMessage">@TempData["Result"]</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-xs clearfix">
+                <div class="col-md-12 col-lg-12">
+                    <div class="card mg-b-20">
+                        <div class="card-header bg-primary">
+                            <h4 class="card-header-title text-white">Edit @Model.Name </h4>
+                            <div class="card-header-btn">
+                                <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse1" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                                <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                                <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+                                <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body collapse show" id="collapse1">
+                            <div class="form-layout form-layout-1">
+                                <div class="row mg-b-25">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label asp-for="Name" class="form-control-label active"></label>
+                                            <input type="text" asp-for="Name" value="@Model.Name" class="form-control" required="" />
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="form-layout-footer">
+                                    <input type="submit" value="Edit" class="btn btn-custom-primary mt-sm-3" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,285 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\TMS_V1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\views\\teamleadroles\\edittask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\views\\teamleadroles\\edittask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\controllers\\teamleadrolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\controllers\\teamleadrolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.Tasks.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\views\\reguserroles\\edittask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\views\\reguserroles\\edittask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\controllers\\reguserrolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\controllers\\reguserrolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\controllers\\reguserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\controllers\\reguserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.UserTeams.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\views\\tasks\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\views\\tasks\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.Teams.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|e:\\tms_v1\\tms_v1\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE62B21-4360-4F92-B2BC-0C5D45C77D2F}|TMS_V1\\TMS_V1.csproj|solutionrelative:tms_v1\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.Comments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/Security.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/Security.UserRoles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.RegUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/Security.Roles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditTask.cshtml",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Views\\TeamLeadRoles\\EditTask.cshtml",
+              "RelativeDocumentMoniker": "TMS_V1\\Views\\TeamLeadRoles\\EditTask.cshtml",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Views\\TeamLeadRoles\\EditTask.cshtml",
+              "RelativeToolTip": "TMS_V1\\Views\\TeamLeadRoles\\EditTask.cshtml",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAI0AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-15T15:26:34.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TeamLeadRolesController.cs",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Controllers\\TeamLeadRolesController.cs",
+              "RelativeDocumentMoniker": "TMS_V1\\Controllers\\TeamLeadRolesController.cs",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Controllers\\TeamLeadRolesController.cs",
+              "RelativeToolTip": "TMS_V1\\Controllers\\TeamLeadRolesController.cs",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAkwLQAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T15:26:21.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditTask.cshtml",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Views\\RegUserRoles\\EditTask.cshtml",
+              "RelativeDocumentMoniker": "TMS_V1\\Views\\RegUserRoles\\EditTask.cshtml",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Views\\RegUserRoles\\EditTask.cshtml",
+              "RelativeToolTip": "TMS_V1\\Views\\RegUserRoles\\EditTask.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-15T15:24:24.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegUsersController.cs",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Controllers\\RegUsersController.cs",
+              "RelativeDocumentMoniker": "TMS_V1\\Controllers\\RegUsersController.cs",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Controllers\\RegUsersController.cs",
+              "RelativeToolTip": "TMS_V1\\Controllers\\RegUsersController.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAUwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T15:03:19.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegUserRolesController.cs",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Controllers\\RegUserRolesController.cs",
+              "RelativeDocumentMoniker": "TMS_V1\\Controllers\\RegUserRolesController.cs",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Controllers\\RegUserRolesController.cs",
+              "RelativeToolTip": "TMS_V1\\Controllers\\RegUserRolesController.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAAAkwLcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T15:03:19.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Views\\Tasks\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TMS_V1\\Views\\Tasks\\Edit.cshtml",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Views\\Tasks\\Edit.cshtml",
+              "RelativeToolTip": "TMS_V1\\Views\\Tasks\\Edit.cshtml",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAHEAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-15T15:19:26.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TeamsController.cs",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Controllers\\TeamsController.cs",
+              "RelativeDocumentMoniker": "TMS_V1\\Controllers\\TeamsController.cs",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Controllers\\TeamsController.cs",
+              "RelativeToolTip": "TMS_V1\\Controllers\\TeamsController.cs",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAkwM8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T15:03:06.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "dbo.Comments [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.Comments.sql",
+              "ToolTip": "dbo.Comments [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-15T14:53:33.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "TMS_V1\\Controllers\\TasksController.cs",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "TMS_V1\\Controllers\\TasksController.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAhwIIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T14:51:33.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\TMS_V1\\TMS_V1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TMS_V1\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\TMS_V1\\TMS_V1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TMS_V1\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAuwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T14:30:22.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Tasks [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.Tasks.sql",
+              "ToolTip": "dbo.Tasks [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-15T14:25:58.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dbo.Teams [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.Teams.sql",
+              "ToolTip": "dbo.Teams [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-15T14:22:42.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.UserTeams [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.UserTeams.sql",
+              "ToolTip": "dbo.UserTeams [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-15T14:02:28.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Security.UserRoles [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/Security.UserRoles.sql",
+              "ToolTip": "Security.UserRoles [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-15T14:02:24.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "dbo.RegUsers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/dbo.RegUsers.sql",
+              "ToolTip": "dbo.RegUsers [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-15T14:00:53.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Security.Roles [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/Security.Roles.sql",
+              "ToolTip": "Security.Roles [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-15T14:00:49.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Security.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/TMS_V1/True/SqlTable/Security.Users.sql",
+              "ToolTip": "Security.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-15T09:44:44.761Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

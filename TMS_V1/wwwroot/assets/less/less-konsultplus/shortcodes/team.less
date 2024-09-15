@@ -1,0 +1,49 @@
+/*
+ * Shortcode: Teams.less
+ * -----------------------------------------------
+*/
+.team-members .team-member .team-thumb {
+  overflow: hidden;
+}
+.team-members .team-member img {
+    .transition(all 300ms ease-in-out 0s);
+}
+.team-members .team-member:hover img {
+  transform: scale3d(1.1, 1.08, 1.1);
+}
+.team-member .team-details {
+  background: #f7f8fa none repeat scroll 0 0;
+  border: 1px solid #eee;  
+  .transition(all 300ms ease-in-out 0s);
+}
+.team-member:hover .team-details h4,
+.team-member:hover .team-details p,
+.team-member:hover .team-details a {
+    color: #fff;
+    .transition(all 300ms ease-in-out 0s);
+}
+.team-member .team-details a {
+    .transition(all 300ms ease-in-out 0s);
+}
+.team-block {
+  margin: 0 auto 30px;
+  .team-thumb {
+    overflow: hidden;
+    position: relative;
+    .team-overlay {
+      height: 100%;
+      padding: 50px 20px 0 30px;
+      position: absolute;
+      top: -100%;
+      .transition(all 300ms ease-in-out 0s);
+      width: 100%;
+    }
+  }
+  .team-bottom-part {
+    background: @white-f5 none repeat scroll 0 0;
+    padding: 10px 16px 12px 30px;
+  }
+}
+.team-block:hover .team-overlay {
+  top: 0;
+}

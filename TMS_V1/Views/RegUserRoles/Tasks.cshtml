@@ -1,0 +1,326 @@
+﻿@model IPagedList<TaskEntity>
+
+
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<div class="page-inner">
+    <!-- Main Wrapper -->
+    <div id="main-wrapper">
+        <!--================================-->
+        <!-- Breadcrumb Start -->
+        <!--================================-->
+        <div class="pageheader pd-t-25 pd-b-35">
+            <div class="pd-t-5 pd-b-5">
+                <h1 class="pd-0 mg-0 text-left">User Task Management</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="card mg-b-20">
+                    <div class="collapse show" id="collapse6">
+                        @if (ViewBag.Result != null)
+                        {
+                            <div class="alert alert-danger alert-bordered pd-y-15" role="alert" id="DivError">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="ico icon-close"></i></span>
+                                </button>
+                                <div class="d-sm-flex align-items-center justify-content-start">
+                                    <i class="icon ion-ios-close alert-icon tx-52 tx-danger mg-r-20"></i>
+                                    <div class="mg-t-20 mg-sm-t-0">
+                                        <h5 class="mg-b-2 mr-2 tx-danger" id="hErrorMessage">@ViewBag.Result</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (TempData["Result"] != null)
+                        {
+                            <div class="alert alert-success alert-bordered pd-y-15" role="alert" id="DivSuccess">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="ico icon-close"></i></span>
+                                </button>
+                                <div class="d-sm-flex align-items-center justify-content-start">
+                                    <i class="icon ion-ios-checkmark alert-icon tx-52 mg-r-20 tx-success"></i>
+                                    <div class="mg-t-20 mg-sm-t-0">
+                                        <h5 class="mg-b-2 mr-2 tx-success" id="hSuccessMessage">@TempData["Result"]</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Heading Start -->
+
+        <div class="row">
+
+            <div class="col-md-12 mb-4">
+                <form asp-controller="RegUserRoles" asp-action="Tasks" method="get">
+                    <div class="input-group mx-auto wd-75p">
+                        <input type="text" class="form-control form-control-lg" id="titleSearch" value="@ViewBag.CurrentFilter" name="titleSearch" placeholder="Tasks Title Search" style="width: 250px;margin-right: 50px;" />
+                        <div class="input-group-append">
+                            <input type="submit" class="btn btn-custom-primary" value="Search" style="margin-top: 10px;margin-right: 50px;" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <br />
+            <div class="col-sm-12 col-md-12 mg-t-20 mg-lg-t-0 text-left">
+                <a href="/RegUserRoles/AddTask" class="btn btn-info btn-with-icon" style="margin-top: 15px;margin-right: 50px;">
+                    <div class="ht-40 justify-content-between">
+                        <span class="pd-x-15">Add Task </span>
+                        <span class="icon wd-40"><i class="fa fa-plus"></i></span>
+                    </div>
+                </a>
+            </div>
+
+            <br />
+            <div class="col-md-12 col-sm-12 mb-3 mt-3">
+                <div class="card mg-b-20">
+                    <div class="card-header">
+                        <h4 class="card-header-title">Tasks List</h4>
+                        <div class="card-header-btn">
+                            <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse1" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                            <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                            <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+                            <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body collapse show" id="collapse2">
+                        <table class="table table-striped table-responsive-sm text-center">
+                            <thead class="thead-colored thead-primary">
+                                <tr>
+                                    <th class="text-uppercase text-center w-25">
+                                        Title
+                                    </th>
+
+                                    <th class="text-uppercase text-center w-20">
+                                        Due date
+                                    </th>
+
+                                    <th class="text-uppercase text-center w-20">
+                                        Priority
+                                    </th>
+                                    
+                                    <th class="text-uppercase text-center w-15">Option</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="w-25" scope="row" style="white-space:pre-line;">
+                                            @item.Title
+                                        </td>
+
+                                        <td class="w-25" scope="row" style="white-space:pre-line;">
+                                            @string.Format("{0:dd/MM/yyyy}", item.DueDate)
+                                        </td>
+
+                                        <td class="w-25" style="white-space:pre-line;">
+                                            @item.Priority.ToString()
+                                        </td>
+                                        
+                                        <td class="w-15">
+                                            <a href="/RegUserRoles/AddComment/@item.Id" class="btn btn-primary">Add comment</a>
+                                            <a href="/RegUserRoles/EditTask/@item.Id" class="btn btn-success">Edit</a>
+                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Mymodal_@item.Id">Details</button>
+                                        </td>
+                                    </tr>
+                                    <div class="modal" id="Mymodal_@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_4" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="exampleModalLabel_4">@item.Title</h3>
+
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row-xs clearfix">
+                                                        <div class="col-md-12 col-lg-12">
+                                                            <div class="card mg-b-20">
+                                                                <div class="card-header bg-primary">
+                                                                    <h4 class="card-header-title text-white">Tasks Details</h4>
+                                                                    <div class="card-header-btn">
+                                                                        <a href="" data-toggle="collapse" class="btn card-collapse text-white" data-target="#collapse12" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                                                                        <a href="" data-toggle="refresh" class="btn card-refresh text-white"><i class="ion-android-refresh"></i></a>
+                                                                        <a href="" data-toggle="expand" class="btn card-expand text-white"><i class="ion-android-expand"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-body collapse show" id="collapse12">
+                                                                    <div class="form-layout form-layout-1">
+                                                                        <div class="row mg-b-25">
+                                                                            <div class="col-lg-12">
+                                                                                <div class="form-group">
+                                                                                    <label class="form-control-label active"><strong>Task Title</strong></label>
+                                                                                    <input type="text" class="form-control" value="@item.Title" readonly="readonly" />
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-12">
+                                                                                <div class="form-group">
+                                                                                    <label class="form-control-label active"><strong>Task Status</strong> </label>
+                                                                                    <div class="status" data-status="@item.Status.ToString()">
+                                                                                        @item.Status.ToString()
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-12">
+                                                                                <div class="form-group">
+                                                                                    <label class="form-control-label active"><strong>Task Priority</strong></label>
+                                                                                    <div class="priority" data-priority="@item.Priority.ToString()">
+                                                                                        @item.Priority.ToString()
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="col-lg-12">
+                                                                                <div class="form-group">
+                                                                                    <label class="form-control-label active"><strong>Task Description</strong></label>
+                                                                                    <div>@item.Description</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-12">
+                                                                                <div class="form-group">
+                                                                                    <label class="form-control-label active"><strong>Due Date</strong></label>
+                                                                                    <div class="@(item.DueDate.Date < DateTime.Now.Date ? "text-danger" : "text-warning" )">
+                                                                                        @string.Format("{0:dd/MM/yyyy}", item.DueDate)
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            @{
+                                                                                if (item.Attachment is not null)
+                                                                                {
+                                                                                    <div class="col-lg-12">
+                                                                                        <div class="form-group">
+                                                                                            <label class="form-control-label active"><strong>Task attachment</strong></label>
+
+                                                                                            @{
+                                                                                                if (item.Attachment.ToLower().Contains(".pdf"))
+                                                                                                {
+                                                                                                    <div>
+                                                                                                        <a href="~/Attachments/Pdf/@item.Attachment" target="blank"> @item.Attachment </a>
+                                                                                                    </div>
+                                                                                                }
+                                                                                                else
+                                                                                                {
+                                                                                                    <img class="img-thumbnail" src="~/Attachments/Images/@item.Attachment" width="100%" />
+
+                                                                                                }
+                                                                                            }
+                                                                                        </div>
+                                                                                    </div>
+                                                                                }
+                                                                                if (item.Comments.Count > 0)
+                                                                                {
+                                                                                    <div class="col-lg-12">
+                                                                                        <div class="form-group">
+                                                                                            <label class="form-control-label active"><strong>Comments</strong></label>
+                                                                                            @{
+                                                                                                foreach (var comment in item.Comments)
+                                                                                                {
+                                                                                                    <div class="border border-secondary pl-2 pt-2 mb-2">
+                                                                                                        <img src="~/Content/images/avatar-placeholder.png" width="30" alt="User image" />
+                                                                                                        <label class="form-control-label active">@comment.User.UserName</label>
+                                                                                                        <div class="pl-3"> @comment.Description </div>
+
+                                                                                                    </div>
+
+                                                                                                }
+                                                                                            }
+                                                                                        </div>
+                                                                                    </div>
+                                                                                }
+                                                                            }
+
+                                                                        </div>
+                                                                        <div class="row mg-b-25">
+                                                                            <div class="form-layout-footer">
+                                                                                <a onclick="confirmDelete('@item.Id','@item.Title','RegUserRoles')" class="btn btn-danger">Delete</a>
+                                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </tbody>
+                        </table>
+                        @{
+                            var pagedListDisplay = X.PagedList.Mvc.Core.PagedListDisplayMode.Always;
+
+                        }
+                        @Html.PagedListPager(Model, page => Url.Action("Tasks", new
+                            {
+                                area = "",
+                                page,
+                                titleSearch = ViewBag.CurrentFilter,
+
+                            }),
+                                 new PagedListRenderOptions
+                        {
+                            Display = pagedListDisplay,
+                            LinkToPreviousPageFormat = "Previous",
+                            LinkToNextPageFormat = "Next",
+                            DisplayLinkToPreviousPage = pagedListDisplay,
+                            DisplayLinkToNextPage = pagedListDisplay,
+                            MaximumPageNumbersToDisplay = 10
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/content/js/confirmdelete.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function applyClass(elementClass, attributeName, classMap) {
+                var elements = document.querySelectorAll(`.${elementClass}`);
+                elements.forEach(function (element) {
+                    var value = element.getAttribute(attributeName);
+                    var className = classMap[value];
+                    if (className) {
+                        element.classList.add(className);
+                    }
+                });
+            }
+
+            // Status class mapping
+            var statusClassMap = {
+                'TODO': 'text-primary',      // Blue for ToDo
+                'IN_PROGRESS': 'text-warning', // Orange for In Progress
+                'COMPLETED': 'text-success'   // Green for Completed
+            };
+
+            // Priority class mapping
+            var priorityClassMap = {
+                'HIGH': 'text-danger',    // Red for HIGH priority
+                'MID': 'text-info',       // Light blue for MID priority
+                'EASY': 'text-dark'       // Dark for HARD priority
+            };
+
+            // Apply class for status
+            applyClass('status', 'data-status', statusClassMap);
+
+            // Apply class for priority
+            applyClass('priority', 'data-priority', priorityClassMap);
+        });
+
+    </script>
+
+}
+

@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+<div class="pageheader pd-t-25 pd-b-35">
+    <div class="pd-t-5 pd-b-5">
+        <h1 class="pd-0 mg-0 tx-20">Dashboard</h1>
+    </div>
+
+    <div class="breadcrumb pd-0 mg-0">
+        <a class="breadcrumb-item" href="/Home/"><i class="icon ion-ios-home-outline"></i> Home</a>
+        <span class="breadcrumb-item active">Dashboard</span>
+    </div>
+</div>
+<div class="row row-xs clearfix">
+    <!--================================-->
+    <!-- Count Start -->
+    <!--================================-->
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">All tasks</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.NumberOfAllTasks</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-85p" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">Completed tasks</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.NumberOfCompletedTasks</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-95p" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">TODO tasks</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.NumberOfToDoTasks</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-95p" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6 col-xl-3">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="media d-inline-flex">
+                    <div>
+                        <span class="mb-2">In progress tasks</span>
+                        <h2 class="tx-dark tx-rubik tx-normal"><span class="counter">@ViewBag.NumberOfInProgressTasks</span> </h2>
+                    </div>
+                </div>
+
+                <div class="progress ht-3">
+                    <div class="progress-bar bg-primary wd-95p" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--/ Count End -->
+</div>
+

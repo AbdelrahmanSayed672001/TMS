@@ -1,0 +1,172 @@
+/*
+ * header.less
+ * -----------------------------------------------
+*/
+.header-top {
+	padding: 5px 0;
+
+	.header-widget {
+		.styled-icons {
+			a {
+				i {
+					&:hover {
+						background: none;
+					}
+				}
+			}
+		}
+		.list-border {
+			li {
+				border-right: 1px solid fade(#000, 6%);
+			    padding: 5px 15px;
+
+			    &:last-child {
+			    	border-right: 0;
+			    }
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.header-top {
+		.header-widget {
+			.contact-info {
+				margin-bottom: 20px;
+
+				li {
+					display: block;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.menuzord-brand img {
+	max-height: 38px;
+	@media only screen and (max-width : 767px) {
+		max-height: 30px;
+	}
+}
+
+/* -------- Inner Header ---------- */
+.inner-header .title {
+	text-transform: uppercase;
+}
+
+/* -------- Custom theme style ---------- */
+.header-nav .header-nav-wrapper .menuzord {
+  padding: 0;
+}
+
+
+
+/* Transparent Header */
+.header {
+	/* -------- Header Fixed ---------- */
+	&.header-fixed-top {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 1111;
+	}
+	/* -------- Header Transparent ---------- */
+	&.header-transparent {
+		.menuzord {
+			background: transparent;
+		}
+		&.animated-active {
+			background-color: rgba(0, 0, 0, 0.1);
+			.header-nav-wrapper {
+				border-bottom: none;
+			}
+			.menuzord-menu > li > a {
+				color: #fff;
+			}
+		}
+	}
+	/* @media only screen and (max-width : 900px) {
+		&.header-transparent .animated-active .menuzord-menu > li > a {
+			color: #888;
+		}
+	} */
+
+	
+	/* -------- Header Transparent White ---------- */
+	&.header-transparent-white {
+		background-color: rgba(255, 255, 255, 0.75);
+		border: medium none;
+		.menuzord {
+			background: transparent;
+		}
+	}
+	/* -------- Header Transparent Dark ---------- */
+	&.header-transparent-dark {
+		background-color: rgba(0, 0, 0, 0.75);
+		border: medium none;
+		.menuzord {
+			background: transparent;
+		}
+	}
+	
+}
+
+
+/* -------- Scrolltofixed ---------- */
+.header-nav {
+	.transition(all 0.4s ease-in-out 0s);
+	&.navbar-scrolltofixed.scroll-to-fixed-fixed {
+		background-color: #fff;
+	}
+}
+/* 
+.header-nav .header-nav-absolute-wrapper.scroll-to-fixed-fixed.scroll-to-fixed-fixed .menuzord {
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	border-left: 1px solid #eee;
+}
+.header .inner-sticky-wrapper {
+	height: 80px;
+}
+
+@media only screen and (min-width : 901px) {
+	.header-nav .header-nav-absolute-wrapper {
+		bottom: -36px;
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
+		z-index: 1111;
+	}
+	.header-nav .header-nav-absolute-wrapper.scroll-to-fixed-fixed.scroll-to-fixed-fixed {
+		bottom: auto;
+	}
+}
+
+-------- Navbar Fixed  ----------
+.header-nav {
+	.transition(all 0.4s ease-in-out 0s);
+	&.navbar-fixed-top {
+		left: 0;
+		position: fixed;
+		right: 0;
+		width: 100%;
+		z-index: 1030;
+	}
+}
+
+
+-------- Navbar Sticky Animated ----------
+.navbar-sticky-animated .header-nav-wrapper .container {
+	.transition(all 0.4s ease-in-out 0s);
+}
+.navbar-sticky-animated .add-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar-sticky-animated.extra-padding-top .add-padding {
+  padding-top: 50px;
+}
+ */

@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/Authentication/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/Authentication/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Authentication/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/Authentication/css/style.css">
+
+    <link rel="icon" type="image/x-icon" href="~/assets/images/task-management.png">
+
+
+    <title>TMS</title>
+</head>
+<body>
+    <div class="content">
+        @RenderBody();
+    </div>
+    <script src="~/Authentication/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Authentication/js/popper.min.js"></script>
+    <script src="~/Authentication/js/bootstrap.min.js"></script>
+    <script src="~/Authentication/js/main.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+

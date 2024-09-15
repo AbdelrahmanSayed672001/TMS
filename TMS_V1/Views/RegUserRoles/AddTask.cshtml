@@ -1,0 +1,136 @@
+﻿@model AddTaskViewModel
+
+<link href="~/Content/plugins/dropify/css/dropify.min.css" rel="stylesheet" />
+<div class="page-inner">
+    <div id="main-wrapper">
+        <form asp-controller="RegUserRoles" asp-action="AddTask" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <input asp-for="UserId" value="@ViewBag.AssignedTo" type="hidden" readonly />
+            <div class="pageheader pd-t-25 pd-b-35 ">
+                <div class="pd-t-5 pd-b-5">
+                    <h1 class="pd-0 mg-0 text-left">Task</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="card mg-b-20">
+                        <div class="collapse show" id="collapse6">
+
+                            @if (TempData["Result"] != null)
+                            {
+                                <div class="alert alert-danger alert-bordered pd-y-15" role="alert" id="DivError">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="ico icon-close"></i></span>
+                                    </button>
+                                    <div class="d-sm-flex align-items-center justify-content-start">
+                                        <i class="icon ion-ios-close alert-icon tx-52 tx-danger mg-r-20"></i>
+                                        <div class="mg-t-20 mg-sm-t-0">
+                                            <h5 class="mg-b-2 mr-2 tx-danger" id="hErrorMessage">@TempData["Result"]</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-xs clearfix">
+                <div class="col-md-12 col-lg-12">
+                    <div class="card mg-b-20">
+                        <div class="card-header bg-primary">
+                            <h4 class="card-header-title text-white">Add Task </h4>
+                            <div class="card-header-btn">
+                                <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse1" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                                <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
+                                <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
+                                <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body collapse show" id="collapse1">
+                            <div class="form-layout form-layout-1">
+                                <div class="row mg-b-25">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label asp-for="Title" class="form-control-label active"></label>
+                                            <input type="text" asp-for="Title" class="form-control" required="" />
+                                            <span asp-validation-for="Title" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label asp-for="Description" class="form-control-label active"></label>
+                                            <textarea asp-for="Description" class="form-control" required=""> </textarea>
+                                            <span asp-validation-for="Description" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label asp-for="DueDate" class="form-control-label active"></label>
+                                            <input type="date" asp-for="DueDate" class="form-control" required="" />
+                                            <span asp-validation-for="DueDate" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label asp-for="Status" class="form-control-label active">Status</label>
+                                            <select asp-for="Status" asp-items="@Html.GetEnumSelectList<Status>()" id="country" class="form-control">
+                                                <option>Select a status</option>
+                                            </select>
+                                            <span asp-validation-for="Status" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label asp-for="Priority" class="form-control-label active">Priority</label>
+                                            <select asp-for="Priority" asp-items="@(Html.GetEnumSelectList<Priority>())" id="country" class="form-control">
+                                                <option>Select a priority</option>
+                                            </select>
+                                            <span asp-validation-for="Priority" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label asp-for="TeamId" class="form-control-label active">Team</label>
+                                            <select asp-for="TeamId" required="" id="country" class="form-control">
+                                                <option value="">Select a Team</option>
+                                                @{
+                                                    foreach (var team in ViewBag.Teams)
+                                                    {
+                                                        <option value="@team.Id">@team.Name</option>
+                                                    }
+                                                }
+                                            </select>
+                                            <span asp-validation-for="TeamId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label asp-for="Attachment" class="form-control-label active">Task Attachment</label>
+                                            <input type="file" class="dropify" asp-for="Attachment" data-show-loader="false" />
+                                            <span asp-validation-for="Attachment" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-layout-footer">
+                                    <input type="submit" value="Create" class="btn btn-custom-primary mt-sm-3" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
