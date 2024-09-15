@@ -1,6 +1,6 @@
 # TMS
 A web application built using ASP.NET Core 8, SQL Server, and modern web technologies like HTML, CSS, Bootstrap, JavaScript, JQuery. This web application is built using 
-Repository Design Pattern.
+Repository Design Pattern. The project in master branch with its Database script.
 
 The attached ERD represents the database schema for the Task Management System (TMS). It outlines the relationships between various entities within the system, including Users, Teams, Tasks, and more. The key entities are:
 
